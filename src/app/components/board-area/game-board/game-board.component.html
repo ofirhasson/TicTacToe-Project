@@ -1,0 +1,25 @@
+<div class="container">
+    <div>
+
+        <div class="resultBoard">
+            <h1 style="color: green;">You:{{userResult}}</h1>
+            <h1 style="color: red;">Computer:{{computerResult}}</h1>
+        </div>
+
+        <div class="difficultyContainer">
+            <label>Select Difficulty:&nbsp;&nbsp;</label>
+            <select [disabled]="(!isBoardEmpty)" [(ngModel)]="selectedDifficulty">
+                <option [value]="0">Easy</option>
+                <option [value]="1">Medium</option>
+                <option [value]="2">Hard</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="board">
+        <div *ngFor="let b of board; let i = index" (click)="handleItemClick(b, i)">
+            <img *ngIf="b === 'X'" src="../../../../assets/images/Red_X.png" />
+            <img *ngIf="b === 'O'" src="../../../../assets/images/black_O.png" />
+        </div>
+    </div>
+</div>

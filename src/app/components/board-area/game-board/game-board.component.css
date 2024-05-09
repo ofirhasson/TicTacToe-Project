@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+}
+
+.difficultyContainer {
+    background-color: lightgrey;
+    border: 2px solid;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    border: 3px solid;
+    margin-top: 50px;
+}
+
+.difficultyContainer label{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.board {
+    margin: auto;
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+.board div {
+    background-color: lightgrey;
+    border: 3px solid;
+    height: 200px;
+    width: 200px;
+}
+
+img {
+    height: 100%;
+}
+
+.resultBoard {
+    background-color: lightgrey;
+    border: 2px solid;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 20px;
+}
